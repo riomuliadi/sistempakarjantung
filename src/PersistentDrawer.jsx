@@ -134,15 +134,15 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/'}>
+            <NavLink className="flex items-center w-full p-2 hover:bg-blue-600" to={'/'}>
             <span className="text-gray-600" > <Dashboard className="ml-2 mr-7"/>Dashboard</span>
 
             </NavLink>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/gejala'}>
+            <NavLink className="flex items-center w-full p-2 hover:bg-blue-600" to={'/gejala'}>
             <span className="text-gray-600" ><Emergency className="ml-2 mr-7" />Gejala</span>
 
             </NavLink>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/konsultasi'}>
+            <NavLink className="flex items-center w-full p-2 hover:bg-blue-600" to={'/konsultasi'}>
             <span className="text-gray-600" ><MedicalInformation className="ml-2 mr-7" />Konsultasi</span>
 
             </NavLink>
