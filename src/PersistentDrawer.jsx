@@ -109,7 +109,7 @@ export default function PersistentDrawerLeft() {
               {
                 mr: 2,
               },
-              open && { display: 'none' },
+              open,
             ]}
           >
             <MenuIcon />
