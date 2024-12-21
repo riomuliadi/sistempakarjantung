@@ -12,72 +12,55 @@ import FormKonsultasi from './components/FormKonsultasi.jsx'
 import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
+import { AppBlockingRounded } from '@mui/icons-material'
 
-// const router = createBrowserRouter([
-//   { 
-//     path: '/',
-//     element: <Layout />,
-//     children: [
-//       {
-//         index: true,
-//         element: <PersistentDrawerLeft />,
-//         children: [
-//           {
-//             path: '/gejala',
-//             element: <GejalaForm />,
-//           },
-//           {
-//             index: true,
-//             element: <GejalaForm />,
-//           },
-//           {
-//             path: '/gejala',
-//             element: <HomeTitle />,
-//           },
-//           {
-//             path: '/konsultasi',
-//             element: <FormKonsultasi />,
-//           }
-//         ]
-//       },
-//       {
-//         path: '/login',
-//         element: <HalamanLogin />,
-//       },
-//     ]
-//   }
-// ])
-
-const router= createBrowserRouter([
-  {
-    element: <PersistentDrawerLeft />,
-    path:'/',
-    children:[
-    {
-    path: '/gejala',
-    element:<GejalaForm/>
-  },
-
+const router = createBrowserRouter([
+  { 
+    path: '/',
+    element: <Layout />,
+    children: [
       {
-        index:true,
-        element:<HomeTitle/>
+        path: '/app',
+        element: <App />
       },
       {
-        path: '/konsultasi',
-        element:<FormKonsultasi/>
+        path: '/login',
+        element: <HalamanLogin />,
       },
-      
-  ],
-  },
-  {
-    path: '/login',
-    element:<HalamanLogin/>
-  },
-  {
-    path: '/layout',
-    element:<Layout/>
-  },
+    ]
+  }
 ])
+
+// const router= createBrowserRouter([
+//   {
+//     element: <PersistentDrawerLeft />,
+//     path:'/',
+//     children:[
+//     {
+//     path: '/gejala',
+//     element:<GejalaForm/>
+//   },
+
+//       {
+//         index:true,
+//         element:<HomeTitle/>
+//       },
+//       {
+//         path: '/konsultasi',
+//         element:<FormKonsultasi/>
+//       },
+      
+//   ],
+//   },
+//   {
+//     path: '/login',
+//     element:<HalamanLogin/>
+//   },
+//   {
+//     path: '/layout',
+//     element:<Layout/>
+//   },
+// ])
 
 createRoot(document.getElementById('root')).render(
   // <Router>
