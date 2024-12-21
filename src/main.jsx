@@ -13,72 +13,36 @@ import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
 
-const router = createBrowserRouter([
+const router= createBrowserRouter([
   {
-    path: '/',
     element: <PersistentDrawerLeft />,
-    children: [
-      {
-        index: true, // Mengarahkan ke /layout sebagai halaman awal
-        element: <Navigate to="/layout" Layout />,
-      },
-      {
-        path: 'gejala',
-        element: <GejalaForm />,
-      },
-      {
-        path: 'konsultasi',
-        element: <FormKonsultasi />,
-      },
-    ],
+    path:'/',
+    children:[
+    {
+    path: '/gejala',
+    element:<GejalaForm/>
   },
-  {
-    path: '/layout',
-    element: <Layout />, // Layout tetap pada rute /layout
-    children: [
+
       {
-        index: true,
-        element: <HomeTitle />,
+        index:true,
+        element:<HomeTitle/>
       },
-    ],
+      {
+        path: '/konsultasi',
+        element:<FormKonsultasi/>
+      },
+      
+  ],
   },
   {
     path: '/login',
-    element: <HalamanLogin />,
+    element:<HalamanLogin/>
   },
-]);
-
-
-// const router= createBrowserRouter([
-//   {
-//     element: <PersistentDrawerLeft />,
-//     path:'/',
-//     children:[
-//     {
-//     path: '/gejala',
-//     element:<GejalaForm/>
-//   },
-
-//       {
-//         index:true,
-//         element:<HomeTitle/>
-//       },
-//       {
-//         path: '/konsultasi',
-//         element:<FormKonsultasi/>
-//       },
-      
-//   ],
-//   },
-//   {
-//     path: '/login',
-//     element:<HalamanLogin/>
-//   },
-//   {
-//     path: '/layout',
-//     element:<Layout/>
-//   },
-// ])
+  {
+    path: '/layout',
+    element:<Layout/>
+  },
+])
 
 createRoot(document.getElementById('root')).render(
   // <Router>
