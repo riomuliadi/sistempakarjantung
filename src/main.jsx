@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/',
+        index: true,
         element: <PersistentDrawerLeft />,
         children: [
           {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             element: <GejalaForm />,
           },
           {
-            index: true,
+            path: '/home',
             element: <GejalaForm />,
           },
           {
