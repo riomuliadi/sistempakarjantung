@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />, // Layout dijadikan halaman awal
     children: [
       {
+        path: '/persistent',
         element: <PersistentDrawerLeft />, // PersistentDrawerLeft tetap ada
         children: [
           {
