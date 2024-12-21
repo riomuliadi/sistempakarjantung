@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <PersistentDrawerLeft />,
   },
       {
-        index: true,
+        path: '/home',
         element: <HomeTitle />
       },
       {
