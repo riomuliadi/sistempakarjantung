@@ -5,7 +5,7 @@ const HalamanLogin = () => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate('/persistent')
+        navigate('/dashboard')
     }
   return (
     <div className="flex items-center justify-center min-h-screen bg-blue-500">
