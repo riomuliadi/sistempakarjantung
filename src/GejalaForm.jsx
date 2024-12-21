@@ -13,6 +13,8 @@ import PersistentDrawerLeft from './PersistentDrawer';
 
 const drawerWidth = 240;
 
+<PersistentDrawerLeft />;
+
 
 export default function GejalaForm() {
   
@@ -20,7 +22,7 @@ export default function GejalaForm() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-<PersistentDrawerLeft />;
+
   return (
     
     <>
