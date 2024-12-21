@@ -18,15 +18,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
-     
       {
         index: true,
         element: <PersistentDrawerLeft />,
         children: [
-          {
-            path: '/login',
-            element: <HalamanLogin />,
-          },
           {
             path: '/gejala',
             element: <GejalaForm />,
@@ -45,7 +40,10 @@ const router = createBrowserRouter([
           }
         ]
       },
-      
+      {
+        path: '/login',
+        element: <HalamanLogin />,
+      },
     ]
   }
 ])
