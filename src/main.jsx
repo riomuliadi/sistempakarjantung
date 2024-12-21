@@ -39,6 +39,7 @@ const router= createBrowserRouter([
     element:<HalamanLogin/>
   },
   {
+    index: true,
     path: '/layout',
     element:<Layout/>
   },
