@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true, // Mengarahkan ke /layout sebagai halaman awal
-        element: <Navigate to="/layout" replace />,
+        element: <Navigate to="/layout" Layout />,
       },
       {
         path: 'gejala',
