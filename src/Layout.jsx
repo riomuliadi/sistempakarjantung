@@ -6,7 +6,7 @@ const Layout = () => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate ('/login')
+        navigate ('/app/')
     }
   return (
     <div className="flex min-h-screen bg-blue-500">
