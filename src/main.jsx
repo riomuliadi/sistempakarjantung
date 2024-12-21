@@ -12,22 +12,28 @@ import FormKonsultasi from './components/FormKonsultasi.jsx'
 import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />, // Layout dijadikan halaman awal
     children: [
       {
-        index: true,
-        element: <HomeTitle />
-      },
-      {
-        path: '/gejala',
-        element: <GejalaForm />
-      },
-      {
-        path: '/konsultasi',
-        element: <FormKonsultasi />
+        element: <PersistentDrawerLeft />, // PersistentDrawerLeft tetap ada
+        children: [
+          {
+            index: true,
+            element: <HomeTitle />
+          },
+          {
+            path: '/gejala',
+            element: <GejalaForm />
+          },
+          {
+            path: '/konsultasi',
+            element: <FormKonsultasi />
+          }
+        ]
       }
     ]
   },
