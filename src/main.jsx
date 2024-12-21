@@ -23,6 +23,10 @@ const router = createBrowserRouter([
     path: '/login',
     element: <HalamanLogin />,
   },
+  {
+    path: '/app',
+    element: <App />,
+  },
 ])
 
 // const router= createBrowserRouter([
