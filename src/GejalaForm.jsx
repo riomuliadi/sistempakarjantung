@@ -20,14 +20,15 @@ export default function GejalaForm() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-
+<PersistentDrawerLeft />;
   return (
-    <PersistentDrawerLeft>
+    
+    <>
     <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
     Silahkan Pilih Gejala Yang Dialami
   </Typography>
   <FormDiagnosa item></FormDiagnosa>
-    </PersistentDrawerLeft> 
+    </>
   );
 }
 
