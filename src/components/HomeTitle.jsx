@@ -1,9 +1,7 @@
 import { Typography, Box } from '@mui/material';
 import React from 'react';
-import PersistentDrawerLeft from '../testdrawer';
 
 const HomeTitle = () => {
-  <PersistentDrawerLeft />
   return (
     <Box 
       sx={{

@@ -150,7 +150,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
   <NavLink
-    to={'/dashboard'}
+    to={'/'}
     className={({ isActive }) =>
       `flex items-center w-full p-2 mb-2 rounded-lg
       hover:bg-orange-200 hover:text-black 
