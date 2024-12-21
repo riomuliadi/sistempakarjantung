@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path:'/elemen',
+        index: true,
         element: <PersistentDrawerLeft />,
         children: [
           {
