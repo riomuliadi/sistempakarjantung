@@ -31,17 +31,17 @@ const router= createBrowserRouter([
         path: '/konsultasi',
         element:<FormKonsultasi/>
       },
-     
+      {
+        index: true,
+        element:<Layout/>
+      },
   ],
   },
   {
     path: '/login',
     element:<HalamanLogin/>
   },
-  {
-    index: true,
-    element:<Layout/>
-  },
+  
 ])
 
 createRoot(document.getElementById('root')).render(
