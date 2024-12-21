@@ -24,24 +24,24 @@ const router= createBrowserRouter([
   },
 
       {
-        path: '/home',
+        index:true,
         element:<HomeTitle/>
       },
       {
         path: '/konsultasi',
         element:<FormKonsultasi/>
       },
-      {
-        index: true,
-        element:<Layout/>
-      },
+      
   ],
   },
   {
     path: '/login',
     element:<HalamanLogin/>
   },
-  
+  {
+    path: '/layout',
+    element:<Layout/>
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
