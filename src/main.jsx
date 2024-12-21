@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   {
     path: '/persistent',
     element: <PersistentDrawerLeft />,
-    children: [
+  },
       {
         index: true,
         element: <HomeTitle />
@@ -39,8 +39,7 @@ const router = createBrowserRouter([
         path: '/konsultasi',
         element: <FormKonsultasi />,
       },
-    ]
-  },
+    
   
 ])
 
