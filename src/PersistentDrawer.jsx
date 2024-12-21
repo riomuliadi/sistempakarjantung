@@ -106,10 +106,10 @@ export default function PersistentDrawerLeft() {
             edge="start"
             sx={[
               
-              // {
-              //   mr: 2,
-              // },
-              open,
+              {
+                mr: 2,
+              },
+              open && { display: 'none' },
             ]}
           >
             <MenuIcon />
@@ -120,7 +120,7 @@ export default function PersistentDrawerLeft() {
             src='logo.png'
             />
             <Typography variant="h6" noWrap component="div">
-              Patients
+              Patient
             </Typography>
           
           
