@@ -18,12 +18,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />, // Layout dijadikan halaman awal
     children: [
-      {
-        path: '/dashboard',
-        element: <PersistentDrawerLeft />, // PersistentDrawerLeft tetap ada
-        children: [
+      
           {
-            index: true,
+            path: '/dashboard',
+            // index: true,
             element: <HomeTitle />
           },
           {
@@ -34,8 +32,6 @@ const router = createBrowserRouter([
             path: '/konsultasi',
             element: <FormKonsultasi />
           }
-        ]
-      }
     ]
   },
   {
