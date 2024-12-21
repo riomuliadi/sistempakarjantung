@@ -18,14 +18,15 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
-      {
-        path: '/login',
-        element: <HalamanLogin />,
-      },
+     
       {
         index: true,
         element: <PersistentDrawerLeft />,
         children: [
+          {
+            path: '/login',
+            element: <HalamanLogin />,
+          },
           {
             path: '/gejala',
             element: <GejalaForm />,
