@@ -40,7 +40,6 @@ const router= createBrowserRouter([
   },
   {
     index: true,
-    path: '/layout',
     element:<Layout/>
   },
 ])
