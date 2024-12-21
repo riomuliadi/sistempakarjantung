@@ -15,13 +15,14 @@ const drawerWidth = 240;
 
 
 export default function GejalaForm() {
-  <PersistentDrawerLeft />
+  
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
 
   return (
+    <PersistentDrawerLeft />,
     <>
     <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
     Silahkan Pilih Gejala Yang Dialami
