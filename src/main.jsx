@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <HalamanLogin />,
   },
   {
-    path: '/app',
-    element: <App />,
+    path: '/gejala',
+    element: <GejalaForm />,
   },
 ])
 
