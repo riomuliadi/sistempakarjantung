@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
+        path: '/login',
+        element: <HalamanLogin />,
+      },
+      {
         index: true,
         element: <PersistentDrawerLeft />,
         children: [
@@ -40,10 +44,7 @@ const router = createBrowserRouter([
           }
         ]
       },
-      {
-        path: '/login',
-        element: <HalamanLogin />,
-      },
+      
     ]
   }
 ])
