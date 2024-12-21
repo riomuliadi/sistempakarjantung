@@ -9,11 +9,13 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 
 import FormDiagnosa from './components/FormDiagnosa';
+import PersistentDrawerLeft from './PersistentDrawer';
 
 const drawerWidth = 240;
 
 
 export default function GejalaForm() {
+  <PersistentDrawerLeft />
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
