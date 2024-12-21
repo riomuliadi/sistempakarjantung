@@ -26,15 +26,22 @@ const router = createBrowserRouter([
   {
     path: '/persistent',
     element: <PersistentDrawerLeft />,
+    children: [
+      {
+        index: true,
+        element: <HomeTitle />
+      },
+      {
+        path: '/gejala',
+        element: <GejalaForm />,
+      },
+      {
+        path: '/konsultasi',
+        element: <FormKonsultasi />,
+      },
+    ]
   },
-  {
-    path: '/gejala',
-    element: <GejalaForm />,
-  },
-  {
-    path: '/konsultasi',
-    element: <FormKonsultasi />,
-  },
+  
 ])
 
 // const router= createBrowserRouter([
