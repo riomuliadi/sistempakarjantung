@@ -22,13 +22,12 @@ export default function GejalaForm() {
 
 
   return (
-    <PersistentDrawerLeft />,
-    <>
+    <PersistentDrawerLeft>
     <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
     Silahkan Pilih Gejala Yang Dialami
   </Typography>
   <FormDiagnosa item></FormDiagnosa>
-    </>
+    </PersistentDrawerLeft> 
   );
 }
 
