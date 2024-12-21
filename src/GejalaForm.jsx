@@ -21,10 +21,10 @@ export default function GejalaForm() {
 
   return (
     <>
-    <Typography  sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center'}}>
+    <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
     Silahkan Pilih Gejala Yang Dialami
   </Typography>
-  <FormDiagnosa></FormDiagnosa>
+  <FormDiagnosa item></FormDiagnosa>
     </>
   );
 }

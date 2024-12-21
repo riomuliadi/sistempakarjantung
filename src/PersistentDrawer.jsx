@@ -18,8 +18,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Dashboard, Emergency, ExitToApp, MedicalInformation } from '@mui/icons-material';
+import { Dashboard, Emergency, ExitToApp, Fullscreen, MedicalInformation } from '@mui/icons-material';
 import { NavLink, Outlet } from 'react-router-dom';
+import { blue, grey } from '@mui/material/colors';
+import { colors } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -32,6 +34,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
+    backgroundColor: '#d9d9d9', height: 'auto',
     variants: [
       {
         props: ({ open }) => open,
@@ -70,6 +73,7 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
+  // backgroundColor: blue[700],
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
@@ -89,9 +93,9 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  
   return (
-    <Box sx={{ display: 'flex', backgroundColor: "blue", color: "blue",}}>
+    <Box  sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -101,6 +105,7 @@ export default function PersistentDrawerLeft() {
             onClick={handleDrawerOpen}
             edge="start"
             sx={[
+              
               {
                 mr: 2,
               },
@@ -109,18 +114,28 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Patients
-          </Typography>
+          
+            <img 
+            className='h-8 w-8 mr-4 '
+            src='logo.png'
+            />
+            <Typography variant="h6" noWrap component="div">
+              Patient
+            </Typography>
+          
+          
         </Toolbar>
       </AppBar>
       <Drawer
-        sx={{
+        sx={{ 
           width: drawerWidth,
           flexShrink: 0,
+          
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+            backgroundColor: 'white',
+            
           },
         }}
         variant="persistent"
@@ -134,18 +149,51 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/'}>
-            <span className="text-gray-600" > <Dashboard className="ml-2 mr-7"/>Dashboard</span>
+  <NavLink
+    to={'/'}
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 mb-2 rounded-lg
+      hover:bg-orange-200 hover:text-black 
+      ${isActive ? 'bg-orange-300 text-black' : 'text-black'}`
+    }
+  >
+    <span>
+      <Dashboard className="ml-2 mr-7" />
+      Dashboard
+    </span>
+  </NavLink>
 
-            </NavLink>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/gejala'}>
-            <span className="text-gray-600" ><Emergency className="ml-2 mr-7" />Gejala</span>
+  <NavLink
+    to={'/gejala'}
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 mb-2 rounded-lg
+      hover:bg-orange-200 hover:text-black 
+      ${isActive ? 'bg-orange-300 text-black' : 'text-black'}`
+    }
+  >
+    <span>
+      <Emergency className="ml-2 mr-7" />
+      Gejala
+    </span>
+  </NavLink>
 
-            </NavLink>
-            <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/konsultasi'}>
-            <span className="text-gray-600" ><MedicalInformation className="ml-2 mr-7" />Konsultasi</span>
+  <NavLink
+    to={'/konsultasi'}
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 mb-2 rounded-lg
+      hover:bg-orange-200 hover:text-black 
+      ${isActive ? 'bg-orange-300 text-black' : 'text-black '}`
+    }
+  >
+    <span>
+      <MedicalInformation className="ml-2 mr-7" />
+      Konsultasi
+    </span>
+  </NavLink>
+</List>
 
-            </NavLink>
+
+            
           {/* {['Dashboard', 'Gejala', 'Konsultasi'].map((text, index) => (
             <ListItem key={text}  disablePadding>
               <ListItemButton>
@@ -156,11 +204,13 @@ export default function PersistentDrawerLeft() {
               </ListItemButton>
             </ListItem>
           ))} */}
-        </List>
+        
+        
         <Divider />
         <List>
-        <NavLink className="flex items-center w-full p-2 hover:bg-gray-100" to={'/'}>
-            <span className="text-gray-600" > <ExitToApp className="ml-2 mr-7"/>Log Out</span>
+        
+        <NavLink className="flex items-center w-full p-2" to={'/login'}>
+            <span className="text-black" > <ExitToApp className="ml-2 mr-7"/>Log Out</span>
 
             </NavLink>
             

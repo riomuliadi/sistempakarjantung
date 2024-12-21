@@ -9,10 +9,13 @@ import GejalaForm from './GejalaForm.jsx'
 import PersistentDrawerLeft from './PersistentDrawer.jsx'
 import HomeTitle from './components/HomeTitle.jsx'
 import FormKonsultasi from './components/FormKonsultasi.jsx'
+import PatientLogin from './HalamanLogin.jsx'
+import HalamanLogin from './HalamanLogin.jsx'
+import Layout from './Layout.jsx'
 
 const router= createBrowserRouter([
   {
-    element: <PersistentDrawerLeft/>,
+    element: <PersistentDrawerLeft />,
     path:'/',
     children:[
     {
@@ -28,9 +31,17 @@ const router= createBrowserRouter([
         path: '/konsultasi',
         element:<FormKonsultasi/>
       },
+     
   ],
-
-  }
+  },
+  {
+    path: '/login',
+    element:<HalamanLogin/>
+  },
+  {
+    path: '/layout',
+    element:<Layout/>
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
