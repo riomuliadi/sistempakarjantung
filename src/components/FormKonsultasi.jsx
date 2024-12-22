@@ -9,6 +9,7 @@
 // export default FormKonsultasi
 
 import React, { useState } from 'react';
+import PersistentDrawerLeft from '../PersistentDrawer';
 
 const FormKonsultasi = () => {
   const [formData, setFormData] = useState({
@@ -32,6 +33,8 @@ const FormKonsultasi = () => {
   };
 
   return (
+    <>
+    <PersistentDrawerLeft></PersistentDrawerLeft>
     <div className='m-0 p-5 text-black'>
       <div className='color: text-black text-center font-bold text-2xl mt-0 mb-4'>Form Konsultasi</div>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
@@ -134,6 +137,8 @@ const FormKonsultasi = () => {
 
       </form>
     </div>
+    </>
+    
   );
 };
 
