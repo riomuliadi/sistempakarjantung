@@ -35,7 +35,7 @@ const FormKonsultasi = () => {
   return (
     <>
     <PersistentDrawerLeft></PersistentDrawerLeft>
-    <div className='m-0 p-5 text-black bg-gray-300'>
+    <div className='m-0 p-5 text-black bg-gray-400'>
       <div className='color: text-black text-center font-bold text-2xl mt-0 mb-4'>Form Konsultasi</div>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
         {/* Input Nama */}
