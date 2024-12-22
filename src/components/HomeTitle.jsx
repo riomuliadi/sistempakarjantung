@@ -4,7 +4,7 @@ import PersistentDrawerLeft from '../PersistentDrawer';
 
 const HomeTitle = () => {
   return (
-    <>
+    <div className='bg-gray-300'>
    <PersistentDrawerLeft></PersistentDrawerLeft>
     <Box 
       sx={{
@@ -25,7 +25,7 @@ const HomeTitle = () => {
         Selamat Datang Di Sistem Pakar Diagnosa Penyakit Jantung
       </Typography>
     </Box>
-    </>
+    </div>
     
   );
 }
