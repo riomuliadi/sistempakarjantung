@@ -16,7 +16,7 @@ const HomeTitle = () => {
     >
       <Typography 
         color="black" 
-        sx={{ 
+        sx={{  display: 'flex',
           fontSize: 24, 
           fontWeight: 'bold', 
           textAlign: 'center' 

@@ -26,7 +26,7 @@ export default function GejalaForm() {
     
     <div className="bg-gray-300">
     <PersistentDrawerLeft></PersistentDrawerLeft>
-    <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
+    <Typography color='white' sx={{display: 'flex', marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
     Silahkan Pilih Gejala Yang Dialami
   </Typography>
   <FormDiagnosa></FormDiagnosa>
