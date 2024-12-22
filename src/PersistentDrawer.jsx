@@ -34,7 +34,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
-    backgroundColor: '#d9d9d9',
+    // backgroundColor: '#d9d9d9',
     variants: [
       {
         props: ({ open }) => open,

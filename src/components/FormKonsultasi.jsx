@@ -33,9 +33,9 @@ const FormKonsultasi = () => {
   };
 
   return (
-    <>
+    <div className="bg-gray-300">
     <PersistentDrawerLeft></PersistentDrawerLeft>
-    <div className='m-0 p-5 text-black bg-gray-400'>
+    <div className='m-0 p-5 text-black'>
       <div className='color: text-black text-center font-bold text-2xl mt-0 mb-4'>Form Konsultasi</div>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
         {/* Input Nama */}
@@ -137,7 +137,7 @@ const FormKonsultasi = () => {
 
       </form>
     </div>
-    </>
+    </div>
     
   );
 };
