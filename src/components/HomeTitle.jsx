@@ -3,6 +3,8 @@ import React from 'react';
 
 const HomeTitle = () => {
   return (
+    <>
+    <PersistentDrawerLeft></PersistentDrawerLeft>
     <Box 
       sx={{
         display: 'flex', 
@@ -22,6 +24,8 @@ const HomeTitle = () => {
         Selamat Datang Di Sistem Pakar Diagnosa Penyakit Jantung
       </Typography>
     </Box>
+    </>
+    
   );
 }
 
