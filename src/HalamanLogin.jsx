@@ -111,9 +111,10 @@ const HalamanLogin = () => {
       <div className="w-full max-w-xs">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <div className="bg-red-500 p-4 rounded-full">
-              {/* Placeholder for logo or image */}
-            </div>
+          <img 
+            className='h-8 w-8 mr-4 '
+            src='logo.png'
+            />
           </div>
           <h1 className="text-white text-2xl font-semibold">Patient</h1>
         </div>
