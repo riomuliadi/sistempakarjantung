@@ -6,10 +6,10 @@ const Layout = () => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate ('/login');
+        navigate ('/login')
     }
   return (
-    <div className="flex min-h-screen bg-blue-500">
+    <div className="flex min-h-screen bg-blue-600">
       <div className="text-left ml-20 mt-20">
         <h1 className="text-white text-4xl font-semibold mb-4">Sistem Pakar</h1>
         <h2 className="text-white text-6xl font-bold mb-6 mt-24">
@@ -17,7 +17,7 @@ const Layout = () => {
         </h2>
         <button
       onClick={handleNavigate}
-        className="w-[375px] mt-20 bg-green-500 text-white px-6 py-2 rounded-full font-medium hover:bg-green-600">
+        className="w-[375px] mt-20 bg-green-600 text-white px-7 py-2 rounded-full font-medium hover:bg-green-700">
           Patient
       </button>
         {/* <div className="mt-8">

@@ -1,11 +1,8 @@
 import { Typography, Box } from '@mui/material';
 import React from 'react';
-import PersistentDrawerLeft from '../PersistentDrawer';
 
 const HomeTitle = () => {
   return (
-    <div className='bg-gray-300'>
-   <PersistentDrawerLeft></PersistentDrawerLeft>
     <Box 
       sx={{
         display: 'flex', 
@@ -16,7 +13,7 @@ const HomeTitle = () => {
     >
       <Typography 
         color="black" 
-        sx={{  display: 'flex',
+        sx={{ 
           fontSize: 24, 
           fontWeight: 'bold', 
           textAlign: 'center' 
@@ -25,8 +22,6 @@ const HomeTitle = () => {
         Selamat Datang Di Sistem Pakar Diagnosa Penyakit Jantung
       </Typography>
     </Box>
-    </div>
-    
   );
 }
 

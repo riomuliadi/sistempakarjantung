@@ -13,7 +13,7 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-blue-600 flex items-center justify-center">
       {hasilDiagnosa ? (
         <HasilDiagnosa hasil={hasilDiagnosa} />
       ) : (

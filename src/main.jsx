@@ -12,67 +12,37 @@ import FormKonsultasi from './components/FormKonsultasi.jsx'
 import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
-import { AppBlockingRounded } from '@mui/icons-material'
 
-const router = createBrowserRouter([
-  { 
-    path: '/',
-    element: <Layout />,
-  },
+const router= createBrowserRouter([
   {
-    path: '/login',
-    element: <HalamanLogin />,
-  },
-  {
-    path: '/persistent',
     element: <PersistentDrawerLeft />,
+    path:'/',
+    children:[
+    {
+    path: '/gejala',
+    element:<GejalaForm/>
   },
+
       {
-        path: '/home',
-        element: <HomeTitle />
-      },
-      {
-        path: '/gejala',
-        element: <GejalaForm />,
+        index:true,
+        element:<HomeTitle/>
       },
       {
         path: '/konsultasi',
-        element: <FormKonsultasi />,
+        element:<FormKonsultasi/>
       },
-    
-  
+     
+  ],
+  },
+  {
+    path: '/login',
+    element:<HalamanLogin/>
+  },
+  {
+    path: '/layout',
+    element:<Layout/>
+  },
 ])
-
-// const router= createBrowserRouter([
-//   {
-//     element: <PersistentDrawerLeft />,
-//     path:'/',
-//     children:[
-//     {
-//     path: '/gejala',
-//     element:<GejalaForm/>
-//   },
-
-//       {
-//         index:true,
-//         element:<HomeTitle/>
-//       },
-//       {
-//         path: '/konsultasi',
-//         element:<FormKonsultasi/>
-//       },
-      
-//   ],
-//   },
-//   {
-//     path: '/login',
-//     element:<HalamanLogin/>
-//   },
-//   {
-//     path: '/layout',
-//     element:<Layout/>
-//   },
-// ])
 
 createRoot(document.getElementById('root')).render(
   // <Router>

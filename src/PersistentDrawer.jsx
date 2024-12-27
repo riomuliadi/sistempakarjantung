@@ -34,7 +34,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
-    // backgroundColor: '#d9d9d9',
+    backgroundColor: '#d9d9d9', height: 'auto',
     variants: [
       {
         props: ({ open }) => open,
@@ -150,7 +150,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
   <NavLink
-    to={'/home'}
+    to={'/'}
     className={({ isActive }) =>
       `flex items-center w-full p-2 mb-2 rounded-lg
       hover:bg-orange-200 hover:text-black 
