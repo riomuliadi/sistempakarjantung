@@ -16,7 +16,6 @@ import Layout from './Layout.jsx'
 const router= createBrowserRouter([
   {
     element: <PersistentDrawerLeft />,
-    path:'/',
     children:[
     {
     path: '/gejala',
@@ -24,7 +23,7 @@ const router= createBrowserRouter([
   },
 
       {
-        index:true,
+        path: '/home',
         element:<HomeTitle/>
       },
       {
@@ -39,7 +38,8 @@ const router= createBrowserRouter([
     element:<HalamanLogin/>
   },
   {
-    path: '/layout',
+    index:true,
+    path: '/',
     element:<Layout/>
   },
 ])
