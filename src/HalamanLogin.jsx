@@ -112,7 +112,7 @@ const HalamanLogin = () => {
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
           <img 
-            className='h-8 w-8 mr-4 '
+            className='h-36 w-36 mr-4 '
             src='logo.png'
             />
           </div>
