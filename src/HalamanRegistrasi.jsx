@@ -6,19 +6,11 @@ function HalamanRegistrasi() {
       {/* Left Section */}
       <div className="flex-1 bg-blue-700 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-40 h-40 bg-red-500 rounded-full flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-24 w-24 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 8a7.002 7.002 0 00-13.93-2M3 16h18m-9-9V4m0 16v-4" />
-            </svg>
+          <div className="w-40 h-40 flex items-center justify-center">
+          <img 
+            className='h-36 w-36 mr-4 '
+            src='logo.png'
+            />
           </div>
         </div>
       </div>
