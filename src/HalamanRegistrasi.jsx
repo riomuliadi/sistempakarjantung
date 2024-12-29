@@ -6,7 +6,7 @@ function HalamanRegistrasi() {
       {/* Left Section */}
       <div className="flex-1 bg-blue-700 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-40 h-40 flex items-center justify-center">
+          <div className="w-80 h-80 flex items-center justify-center">
           <img 
             className='h-36 w-36 mr-4 '
             src='logo.png'
