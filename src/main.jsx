@@ -12,6 +12,7 @@ import FormKonsultasi from './components/FormKonsultasi.jsx'
 import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
+import HalamanRegistrasi from './HalamanRegistrasi.jsx'
 
 const router= createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router= createBrowserRouter([
     path: '/',
     element:<Layout/>
   },
+  {
+    path: '/register',
+    element:<HalamanRegistrasi/>
+  }
 ])
 
 createRoot(document.getElementById('root')).render(

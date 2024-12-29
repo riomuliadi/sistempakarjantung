@@ -160,7 +160,7 @@ const HalamanLogin = () => {
           <a className="text-sm">
             Belum memiliki akun? Silahkan
           </a>
-          <a href="/layout" className="ml-1 text-sm hover:underline">
+          <a href="/register" className="ml-1 text-sm hover:underline">
             SIGN UP
           </a>
         </div>
