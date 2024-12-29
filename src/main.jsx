@@ -35,6 +35,10 @@ const router= createBrowserRouter([
   ],
   },
   {
+    path: '/register',
+    element:<HalamanRegistrasi/>
+  },
+  {
     path: '/login',
     element:<HalamanLogin/>
   },
@@ -43,10 +47,7 @@ const router= createBrowserRouter([
     path: '/',
     element:<Layout/>
   },
-  {
-    path: '/register',
-    element:<HalamanRegistrasi/>
-  }
+  
 ])
 
 createRoot(document.getElementById('root')).render(
