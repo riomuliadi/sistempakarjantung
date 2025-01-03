@@ -38,8 +38,8 @@ const HalamanLogin = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-600">
-      <div className="w-full max-w-xs">
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="w-48 h-48 bg-blue-600">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <img 
@@ -50,6 +50,7 @@ const HalamanLogin = () => {
           </div>
           <h1 className="text-white text-2xl font-semibold">Patient</h1>
         </div>
+        
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <input
