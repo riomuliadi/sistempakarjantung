@@ -75,7 +75,7 @@ const HalamanLogin = () => {
               {errorMessage}
             </div>
           )}
-          <div className="mb-6">
+          <div className="mb-6 mt-8">
             <button
               type="submit"
               className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
