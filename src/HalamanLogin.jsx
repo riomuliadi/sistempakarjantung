@@ -39,7 +39,7 @@ const HalamanLogin = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
-      <div className="w-full max-w-xs bg-blue-600">
+      <div className="w-full max-w-xl bg-blue-600">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <img 
