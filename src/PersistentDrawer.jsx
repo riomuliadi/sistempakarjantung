@@ -177,7 +177,7 @@ export default function PersistentDrawerLeft() {
     </span>
   </NavLink>
 
-  <NavLink
+  {/* <NavLink
     to={'/konsultasi'}
     className={({ isActive }) =>
       `flex items-center w-full p-2 mb-2 rounded-lg
@@ -189,7 +189,7 @@ export default function PersistentDrawerLeft() {
       <MedicalInformation className="ml-2 mr-7" />
       Konsultasi
     </span>
-  </NavLink>
+  </NavLink> */}
 </List>
 
 
