@@ -1,35 +1,3 @@
-// import * as React from 'react';
-// import { styled, useTheme } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-// import Drawer from '@mui/material/Drawer';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import MuiAppBar from '@mui/material/AppBar';
-// import Toolbar from '@mui/material/Toolbar';
-// import List from '@mui/material/List';
-// import Typography from '@mui/material/Typography';
-
-// import FormDiagnosa from './components/FormDiagnosa';
-
-// const drawerWidth = 240;
-
-
-// export default function GejalaForm() {
-
-//   const theme = useTheme();
-//   const [open, setOpen] = React.useState(false);
-
-
-//   return (
-//     <>
-//     <Typography color='white' sx={{ marginBottom: 2,  fontSize: 24, fontWeight: 'bold', textAlign: 'center', color:'black'}}>
-//     Silahkan Pilih Gejala Yang Dialami
-//   </Typography>
-//   <FormDiagnosa item></FormDiagnosa>
-//     </>
-//   );
-// }
-
-
 import * as React from 'react';
 import axios from 'axios';
 import { Typography } from '@mui/material';
