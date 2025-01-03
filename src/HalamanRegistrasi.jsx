@@ -121,7 +121,7 @@ function HalamanRegistrasi() {
           )}
           <div className="mb-6">
             <button
-            
+              onClick={handleNavigate}
               type="submit"
               className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
             >
