@@ -23,7 +23,7 @@ export default function FormDiagnosa({ items }) {
 
   return (
     <>
-      <Grid container spacing={1}>
+      <Grid container>
         {items.map((item) => (
           <Grid item xs={6} key={item.id_gejala}>
             <List>
