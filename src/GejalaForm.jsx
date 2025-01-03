@@ -36,7 +36,7 @@ export default function GejalaForm() {
     <>
       <Typography
         color="black"
-        sx={{ marginBottom: 2, fontSize: 24, fontWeight: 'bold', textAlign: 'center' }}
+        sx={{ fontSize: 24, fontWeight: 'bold', textAlign: 'center' }}
       >
         Silahkan Pilih Gejala Yang Dialami
       </Typography>
