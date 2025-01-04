@@ -209,7 +209,7 @@ function HalamanRegistrasi() {
           <input type="text" placeholder="No Telepon" className="w-full px-4 py-2 border" value={no_telepon} onChange={(e) => setNoTelepon(e.target.value)} />
           <input type="text" placeholder="Jenis Kelamin" className="w-full px-4 py-2 border" value={jenis_kelamin} onChange={(e) => setJenisKelamin(e.target.value)} />
           {errorMessage && <div className="text-red-500 text-center mb-4">{errorMessage}</div>}
-          <button type="submit" className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">SUBMIT</button>
+          <button onClick={handleRegister} type="submit" className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">SUBMIT</button>
         </form>
       </div>
     </div>
