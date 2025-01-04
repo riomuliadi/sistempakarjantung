@@ -139,10 +139,10 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import axios from "axios";
-import Swal from "sweetalert2";
+import axios from 'axios';
+import Swal from 'sweetalert2'; // Import SweetAlert2
 
-function HalamanRegistrasi() {
+const HalamanRegistrasi = () => {
   const navigate = useNavigate();
   const [nama, setNama] = useState("");
   const [email, setEmail] = useState("");
@@ -152,54 +152,35 @@ function HalamanRegistrasi() {
   const [jenis_kelamin, setJenisKelamin] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleNavigate = () => {
-    navigate("/login");
-  };
 
-  const handleRegister = async (e) => {
+  const handleRegister= async (e) => {
     e.preventDefault();
-
-    // Validasi form
-    if (!nama || !email || !password || !alamat || !no_telepon || !jenis_kelamin) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Semua field harus diisi!",
-      });
-      return;
-    }
 
     const registerData = { nama, email, password, alamat, no_telepon, jenis_kelamin };
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/user/", registerData, {
+      const response = await axios.post('http://127.0.0.1:5000/user', registerData, {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
 
       if (response.status === 200) {
         Swal.fire({
-          icon: "success",
-          title: "Berhasil!",
-          text: "Registrasi berhasil, silakan login.",
+          title: 'Register Berhasil!',
+          text: 'Anda akan diarahkan ke halaman dashboard.',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
         }).then(() => {
-          handleNavigate();
+          navigate('/login'); // Navigasi setelah alert muncul
         });
       } else {
-        Swal.fire({
-          icon: "error",
-          title: "Gagal!",
-          text: response.data.message,
-        });
+        setErrorMessage(response.data.message);
       }
     } catch (error) {
-      console.error("Error:", error);
-      Swal.fire({
-        icon: "error",
-        title: "Error!",
-        text: "Terjadi kesalahan, silakan coba lagi.",
-      });
+      console.error('Error:', error);
+      setErrorMessage("Something went wrong. Please try again.");
     }
   };
 
@@ -285,6 +266,9 @@ function HalamanRegistrasi() {
       </div>
     </div>
   );
-}
+};
 
 export default HalamanRegistrasi;
+
+
+
