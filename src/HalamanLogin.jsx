@@ -133,7 +133,7 @@ const HalamanLogin = () => {
       if (response.status === 200) {
         Swal.fire({
           title: 'Login Berhasil!',
-          text: 'Anda akan diarahkan ke halaman home.',
+          text: 'Anda akan diarahkan ke halaman dashboard.',
           icon: 'success',
           timer: 2000,
           showConfirmButton: false,
