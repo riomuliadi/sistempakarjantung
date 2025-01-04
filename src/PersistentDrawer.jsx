@@ -209,10 +209,10 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
         
-        <NavLink className="flex items-center w-full p-2" to={'/login'}>
+        <NavLink className="flex items-center w-full p-2" to={'/logout'}>
             <span className="text-black" > <ExitToApp className="ml-2 mr-7"/>Log Out</span>
 
-            </NavLink>
+        </NavLink>
             
         </List>
       </Drawer>
