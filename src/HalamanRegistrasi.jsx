@@ -156,7 +156,12 @@ function HalamanRegistrasi() {
     e.preventDefault();
 
     if (!nama || !email || !password || !alamat || !no_telepon || !jenis_kelamin) {
-      setErrorMessage("Semua field harus diisi!");
+      Swal.fire({
+        title: "Error!",
+        text: "Semua field harus diisi!",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
       return;
     }
 
@@ -167,18 +172,14 @@ function HalamanRegistrasi() {
         headers: { "Content-Type": "application/json" },
       });
 
-      if (response.status === 200) {
-        Swal.fire({
-          title: "Registrasi Berhasil!",
-          text: "Anda akan diarahkan ke halaman login.",
-          icon: "success",
-          confirmButtonText: "OK",
-        }).then(() => {
-          navigate("/login");
-        });
-      } else {
-        setErrorMessage(response.data.message);
-      }
+      Swal.fire({
+        title: "Registrasi Berhasil!",
+        text: "Anda akan diarahkan ke halaman login.",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        navigate("/login");
+      });
     } catch (error) {
       Swal.fire({
         title: "Error!",
@@ -186,7 +187,6 @@ function HalamanRegistrasi() {
         icon: "error",
         confirmButtonText: "OK",
       });
-      console.error("Error:", error);
     }
   };
 
@@ -208,8 +208,7 @@ function HalamanRegistrasi() {
           <input type="text" placeholder="Alamat" className="w-full px-4 py-2 border" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
           <input type="text" placeholder="No Telepon" className="w-full px-4 py-2 border" value={no_telepon} onChange={(e) => setNoTelepon(e.target.value)} />
           <input type="text" placeholder="Jenis Kelamin" className="w-full px-4 py-2 border" value={jenis_kelamin} onChange={(e) => setJenisKelamin(e.target.value)} />
-          {errorMessage && <div className="text-red-500 text-center mb-4">{errorMessage}</div>}
-          <button onClick={handleRegister} type="submit" className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">SUBMIT</button>
+          <button type="submit" className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">SUBMIT</button>
         </form>
       </div>
     </div>
