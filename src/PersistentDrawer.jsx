@@ -225,7 +225,7 @@ import { colors } from '@mui/material';
 //   );
 // }
 
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 // import { useNavigate } from 'react-router-dom';
 
 export default function PersistentDrawerLeft() {
