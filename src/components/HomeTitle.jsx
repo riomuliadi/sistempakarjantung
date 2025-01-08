@@ -40,7 +40,7 @@ const HomeTitle = () => {
   // Fungsi untuk mengambil data dari API
   const fetchJumlahPasien = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/user/dashboard/pasien'); // Ganti URL sesuai API Flask Anda
+      const response = await axios.get('http://http://127.0.0.1:5000/user/dashboard/jumlah-pasien'); // Ganti URL sesuai API Flask Anda
       setJumlahPasien(response.data);
       setLoading(false);
     } catch (error) {
