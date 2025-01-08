@@ -37,7 +37,7 @@ const Layout = () => {
       {/* Left Section */}
       <div className="flex-1 bg-blue-600 flex items-center justify-center">
         <div className="text-center">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mr-9">
             <img className="h-80 w-80 mr-4" src="logo.png" />
           </div>
         </div>
