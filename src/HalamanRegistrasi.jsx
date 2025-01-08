@@ -206,7 +206,15 @@ function HalamanRegistrasi() {
           <input type="password" placeholder="Password" className="w-full px-4 py-2 border" value={password} onChange={(e) => setPassword(e.target.value)} />
           <input type="text" placeholder="Alamat" className="w-full px-4 py-2 border" value={alamat} onChange={(e) => setAlamat(e.target.value)} />
           <input type="text" placeholder="No Telepon" className="w-full px-4 py-2 border" value={no_telepon} onChange={(e) => setNoTelepon(e.target.value)} />
-          <input type="text" placeholder="Jenis Kelamin" className="w-full px-4 py-2 border" value={jenis_kelamin} onChange={(e) => setJenisKelamin(e.target.value)} />
+          <select
+            value={jenis_kelamin}
+            onChange={(e) => setJenisKelamin(e.target.value)}
+            className="w-full px-4 py-2 border"
+          >
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="L">Laki-Laki</option>
+            <option value="P">Perempuan</option>
+          </select>
           <button type="submit" className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700">SUBMIT</button>
         </form>
       </div>
@@ -215,3 +223,4 @@ function HalamanRegistrasi() {
 }
 
 export default HalamanRegistrasi;
+

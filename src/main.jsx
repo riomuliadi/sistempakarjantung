@@ -14,13 +14,15 @@ import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
 import HalamanRegistrasi from './HalamanRegistrasi.jsx'
 
+import HasilDiagnosa from './components/HasilDiagnosa.jsx'
+
 const router= createBrowserRouter([
   {
     element: <PersistentDrawerLeft />,
     children:[
     {
     path: '/gejala',
-    element:<GejalaForm/>
+    element:<GejalaForm/>,
   },
 
       {
@@ -46,7 +48,12 @@ const router= createBrowserRouter([
     index:true,
     path: '/',
     element:<Layout/>
-  }
+  },
+  
+  // {
+  //   path: '/logout',
+  //   element:<LogoutButton/>
+  // },
   
 ])
 

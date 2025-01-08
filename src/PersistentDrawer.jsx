@@ -225,4 +225,128 @@ export default function PersistentDrawerLeft() {
   );
 }
 
+// import Swal from 'sweetalert2';
+// import { useNavigate } from 'react-router-dom';
 
+// export default function PersistentDrawerLeft() {
+//   const theme = useTheme();
+//   const [open, setOpen] = React.useState(false);
+//   const navigate = useNavigate(); // Hook untuk navigasi
+
+//   const handleDrawerOpen = () => {
+//     setOpen(true);
+//   };
+
+//   const handleDrawerClose = () => {
+//     setOpen(false);
+//   };
+
+//   const handleLogout = () => {
+//     Swal.fire({
+//       title: "Konfirmasi Logout",
+//       text: "Apakah Anda yakin ingin keluar dari halaman ini?",
+//       icon: "warning",
+//       showCancelButton: true,
+//       confirmButtonColor: "#d33",
+//       cancelButtonColor: "#3085d6",
+//       confirmButtonText: "Ya, Keluar",
+//       cancelButtonText: "Batal"
+//     }).then((result) => {
+//       if (result.isConfirmed) {
+//         navigate("/login"); // Arahkan ke halaman login setelah konfirmasi
+//       }
+//     });
+//   };
+
+//   return (
+//     <Box sx={{ display: "flex" }}>
+//       <CssBaseline />
+//       <AppBar position="fixed" open={open}>
+//         <Toolbar>
+//           <IconButton
+//             color="inherit"
+//             aria-label="open drawer"
+//             onClick={handleDrawerOpen}
+//             edge="start"
+//             sx={[
+//               {
+//                 mr: 2,
+//               },
+//               open && { display: "none" },
+//             ]}
+//           >
+//             <MenuIcon />
+//           </IconButton>
+//           <img className="h-8 w-8 mr-4" src="logo.png" alt="Logo" />
+//           <Typography variant="h6" noWrap component="div">
+//             Patient
+//           </Typography>
+//         </Toolbar>
+//       </AppBar>
+//       <Drawer
+//         sx={{
+//           width: drawerWidth,
+//           flexShrink: 0,
+//           "& .MuiDrawer-paper": {
+//             width: drawerWidth,
+//             boxSizing: "border-box",
+//             backgroundColor: "white",
+//           },
+//         }}
+//         variant="persistent"
+//         anchor="left"
+//         open={open}
+//       >
+//         <DrawerHeader>
+//           <IconButton onClick={handleDrawerClose}>
+//             {theme.direction === "ltr" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+//           </IconButton>
+//         </DrawerHeader>
+//         <Divider />
+//         <List>
+//           <NavLink
+//             to={"/home"}
+//             className={({ isActive }) =>
+//               `flex items-center w-full p-2 mb-2 rounded-lg
+//               hover:bg-orange-200 hover:text-black 
+//               ${isActive ? "bg-orange-300 text-black" : "text-black"}`
+//             }
+//           >
+//             <span>
+//               <Dashboard className="ml-2 mr-7" />
+//               Dashboard
+//             </span>
+//           </NavLink>
+
+//           <NavLink
+//             to={"/gejala"}
+//             className={({ isActive }) =>
+//               `flex items-center w-full p-2 mb-2 rounded-lg
+//               hover:bg-orange-200 hover:text-black 
+//               ${isActive ? "bg-orange-300 text-black" : "text-black"}`
+//             }
+//           >
+//             <span>
+//               <Emergency className="ml-2 mr-7" />
+//               Gejala
+//             </span>
+//           </NavLink>
+//         </List>
+
+//         <Divider />
+//         <List>
+//           <button className="flex items-center w-full p-2 text-left" onClick={handleLogout}>
+//             <span className="text-black">
+//               <ExitToApp className="ml-2 mr-7" />
+//               Log Out
+//             </span>
+//           </button>
+//         </List>
+//       </Drawer>
+//       <Main open={open}>
+//         <DrawerHeader />
+//         <Outlet />
+//       </Main>
+//     </Box>
+//   );
+// }

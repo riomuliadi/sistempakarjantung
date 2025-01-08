@@ -1,39 +1,33 @@
-// import React from 'react';
+// src/DiagnosaResult.js
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { Typography, List, ListItem, ListItemText } from '@mui/material';
 
-// const HasilDiagnosa = ({ hasil, setHasil }) => {
-//   return (
-//     <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-//       <h2 className="text-2xl font-bold text-center mb-4">Hasil Diagnosa</h2>
-//       <p className="text-lg text-center">{hasil}</p>
+export default function HasilDiagnosa() {
+  const location = useLocation();
+  const { result } = location.state || { result: [] }; // Mendapatkan data dari state yang dikirim
 
-//       <button
-//         onClick={() => setHasil(null)}
-//         className="w-full bg-gray-600 text-white p-2 rounded-md mt-4"
-//       >
-//         Coba Lagi
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default HasilDiagnosa;
-
-
-import React from "react";
-
-const HasilDiagnosa = ({ hasil }) => {
   return (
-    <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-lg">
-      <h1 className="text-2xl font-bold text-center mb-4">Hasil Diagnosa</h1>
-      <p className="text-center">
-        {hasil === "positif" ? (
-          <span className="text-red-600 font-bold">Kemungkinan penyakit jantung</span>
-        ) : (
-          <span className="text-green-600 font-bold">Tidak ada gejala penyakit jantung</span>
-        )}
-      </p>
+    <div style={{ margin: '20px' }}>
+      <Typography variant="h4" color="primary" sx={{ marginBottom: 2, fontWeight: 'bold' }}>
+        Hasil Diagnosa
+      </Typography>
+      {result.length > 0 ? (
+        <List>
+          {result.map((penyakit, index) => (
+            <ListItem key={index}>
+              <ListItemText
+                primary={`Penyakit ID: ${penyakit.id_penyakit}`}
+                secondary={`Aturan yang cocok: ${penyakit.matchedAturan
+                  .map((rule) => `Gejala ID: ${rule.id_gejala}`)
+                  .join(', ')}`}
+              />
+            </ListItem>
+          ))}
+        </List>
+      ) : (
+        <Typography>No results found</Typography>
+      )}
     </div>
   );
-};
-
-export default HasilDiagnosa;
+}
