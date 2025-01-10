@@ -13,7 +13,6 @@ import PatientLogin from './HalamanLogin.jsx'
 import HalamanLogin from './HalamanLogin.jsx'
 import Layout from './Layout.jsx'
 import HalamanRegistrasi from './HalamanRegistrasi.jsx'
-
 import HasilDiagnosa from './components/HasilDiagnosa.jsx'
 
 const router= createBrowserRouter([
@@ -33,7 +32,10 @@ const router= createBrowserRouter([
         path: '/konsultasi',
         element:<FormKonsultasi/>
       },
-     
+      {
+        path: '/hasil-diagnosa',
+        element:<HasilDiagnosa/>
+      },
   ],
   },
   {
