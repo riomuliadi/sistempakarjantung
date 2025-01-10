@@ -11,8 +11,7 @@ export default function GejalaForm() {
   // Fungsi untuk mengambil data gejala dari API Flask
   const fetchGejala = async () => {
     try {
-      // const response = await axios.get('http://127.0.0.1:5000/gejala');
-      const response = await axios.get('http://realdev2.psti.undiknas.ac.id:5000/gejala');
+      const response = await axios.get('http://127.0.0.1:5000/gejala'); // Ganti URL dengan endpoint Flask Anda
       setGejala(response.data);
       setLoading(false);
     } catch (err) {
