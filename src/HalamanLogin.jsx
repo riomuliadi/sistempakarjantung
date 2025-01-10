@@ -124,7 +124,7 @@ const HalamanLogin = () => {
     const loginData = { email, password };
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/user/login', loginData, {
+      const response = await axios.post('http://realdev2.psti.undiknas.ac.id:5000/user/login', loginData, {
         headers: {
           'Content-Type': 'application/json',
         },
